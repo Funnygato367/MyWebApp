@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Function Scope</h1>
+        <script>
+            function greetings(){
+                var name="Nikunj Soni";
+                console.log("Name:",name);
+                
+                //Block Scope
+                if(true){ 
+                    let num=10; //block scope variable
+                    const a=23;
+                    console.log("Block Scope:",num);
+                    console.log("Name:",name);
+                    console.log("Block Scope:",a); //this will give error as num is not defined outside the block
+                }
+                console.log("Block Scope:",num); //this will give error as num is not defined outside the block
+            
+            }
+            //calling a function
+            greetings();
+
+        </script>
+    </body>
+    </html>
